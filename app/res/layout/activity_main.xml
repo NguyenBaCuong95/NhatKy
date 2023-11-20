@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="70dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/addnew_foreground"
+            app:backgroundTint="@color/addnew_background" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/add_vector"/>
+
+        <LinearLayout
+            android:weightSum="15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_weight="14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/searchIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    app:srcCompat="@drawable/search_icon"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/search" />
+
+                <EditText
+                    android:id="@+id/searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:autofillHints=""
+                    android:hint="@string/search"
+                    android:inputType="textMultiLine"
+                    android:padding="5dp" />
+
+                <ImageButton
+                    android:id="@+id/searchCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    app:srcCompat="@drawable/cancel"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/search" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <GridView
+                    android:id="@+id/gridviewDiary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="1"
+                    android:verticalSpacing="15dp"
+                    android:horizontalSpacing="5dp"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:foregroundGravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="40dp"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_launcher_round" />
+
+                <TextView
+                    android:id="@+id/appname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/app_name"
+                    android:textColor="#0700CC"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting"-->
+<!--                style="@style/DrawerLayout">-->
+<!--                <ImageView-->
+<!--                    style="@style/DrawerLayoutImage"-->
+<!--                    android:contentDescription="@string/todo"-->
+<!--                    app:srcCompat="@drawable/setting_foreground" />-->
+<!--                <TextView-->
+<!--                    style="@style/DrawerLayoutText"-->
+<!--                    android:text="@string/setting"/>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/feedback"-->
+<!--                style="@style/DrawerLayout">-->
+<!--                <ImageView-->
+<!--                    style="@style/DrawerLayoutImage"-->
+<!--                    android:contentDescription="@string/todo"-->
+<!--                    app:srcCompat="@drawable/feedback_foreground"/>-->
+<!--                <TextView-->
+<!--                    style="@style/DrawerLayoutText"-->
+<!--                    android:contentDescription="@string/todo"-->
+<!--                    android:text="@string/feedback"/>-->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/about"
+                style="@style/DrawerLayout">
+                <ImageButton
+                    style="@style/DrawerLayoutImage"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/infor_foreground" />
+                <TextView
+                    style="@style/DrawerLayoutText"
+                    android:text="@string/about"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

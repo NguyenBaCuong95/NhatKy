@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name"><b>Nhật ký</b></string>
+    <string name="app_edit_name">Viết nhật ký</string>
+    <string name="app_infor_vs">Phiên bản v1.0\n</string>
+<!--    <string name="app_infor_name">Nhật ký giấc mơ</string>-->
+    <string name="app_infor_num">Tổng số bản nhật ký: %d</string>
+    <string name="about">Thông tin</string>
+    <string name="cancel">Huỷ</string>
+    <string name="content">Nội dung</string>
+<!--    <string name="bar_day">Ngày</string>-->
+<!--    <string name="bar_night">Đêm</string>-->
+    <string name="bar_list">Danh sách</string>
+    <string name="bar_grid">Bảng</string>
+    <string name="bar_calendar">Lịch</string>
+    <string name="date" tools:ignore="MissingTranslation">%s</string>
+    <string name="day" tools:ignore="MissingTranslation">DAY</string>
+    <string name="drawer_open" translatable="false">Open Navigation Drawer</string>
+    <string name="drawer_close" translatable="false">Close Navigation Drawer</string>
+    <string name="empty_note">Danh sách trống</string>
+    <string name="empty_note2">Nhấn</string>
+    <string name="empty_note3">để tạo mới</string>
+    <string name="feedback">Hỗ trợ</string>
+<!--    <string name="list_name">Danh sách nhật ký</string>-->
+    <string name="ok">Đồng ý</string>
+    <string name="title">Chủ đề</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="setting">Cài đặt</string>
+    <string name="noresult">Không có kết quả phù hợp</string>
+    <string name="delete">Xoá</string>
+    <string name="saved">Đã lưu</string>
+
+</resources>

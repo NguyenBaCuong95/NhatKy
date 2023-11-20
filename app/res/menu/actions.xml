@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item-->
+<!--        android:id="@+id/bar_day"-->
+<!--        android:title="@string/bar_day"-->
+<!--        app:showAsAction="ifRoom"/>-->
+<!--    <item-->
+<!--        android:id="@+id/bar_night"-->
+<!--        android:title="@string/bar_night"-->
+<!--        app:showAsAction="always" />-->
+    <item
+        android:id="@+id/bar_list"
+        android:title="@string/bar_list"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/bar_grid"
+        android:title="@string/bar_grid"
+        app:showAsAction="never"/>
+<!--    <item-->
+<!--        android:id="@+id/bar_calendar"-->
+<!--        android:title="@string/bar_calendar"-->
+<!--        app:showAsAction="never"/>-->
+</menu>
